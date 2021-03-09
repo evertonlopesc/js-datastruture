@@ -1,4 +1,5 @@
 console.log("Begin process...");
+
 var num = 1;
 num2 = 3;
 var price = 1.5;
