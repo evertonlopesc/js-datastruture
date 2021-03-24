@@ -50,3 +50,20 @@ function Books(title, pages, isbn) {
 };
  books = new Books("title", "pages", "isbn");
  books.printTitles();
+
+ class xBook {
+     constructor(title, pages, isbn) {
+         this.title = title;
+         this.pages = pages;
+         this.isbn = isbn;
+     };
+     xPrintIsbn() {
+         console.log(this.isbn);
+     };
+ };
+
+ let xbook = new xBook("title", "pages", "isbn");
+ console.log(xbook.title);
+ xbook.title = "new title";
+ console.log(xbook.title);
+ xbook.xPrintIsbn();
