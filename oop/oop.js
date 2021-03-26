@@ -67,3 +67,39 @@ function Books(title, pages, isbn) {
  xbook.title = "new title";
  console.log(xbook.title);
  xbook.xPrintIsbn();
+
+// Herança
+ class ITBook extends Books {
+     constructor(title, pages, isbn, technology) {
+         super(title, pages, isbn, technology);
+         this.technology = technology;
+     }
+     printTechnology() {
+         console.log(this.technology);
+     }
+ };
+
+ let jsBook = new ITBook("Learning JS Algorithms", "200", "1234567890", "Javascript");
+ console.log(jsBook.title + " Aqui");
+ console.log(jsBook.printTechnology());
+
+ //GETTERS e SETTERS
+
+ class Person {
+     constructor(name) {
+         this._name = name;  // Atributo privado
+     }
+     get name() {
+         return this._name;
+     }
+     set name(value) {
+         this._name = value;
+     }
+ };
+
+ let lotrChar = new Person("Frodo");
+ console.log(lotrChar.name);
+ lotrChar.name = "Gandalf";
+ console.log(lotrChar.name);
+ lotrChar._name = "Sam";
+ console.log(lotrChar.name);
