@@ -1,5 +1,13 @@
 // Modules
 
+// Para expor somente um método podemos usar a palavra reservada:
+// export default.
+
+/**
+ * export default nameFuncao ou nameClass() {};
+ * 
+ */
+
 //  export function circleArea(r) {
 //    return 3.14 * (r ** 2);
 //  };
