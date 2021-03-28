@@ -1,14 +1,12 @@
-# Small title
+# Title small --------------------------|
+Title: 
 
-# Title -------------------------------------|
+Description: 
 
 # Example: 
 # new file, template commit .gitmessage,
 # modified, .gitmessage with example,
 # delete, file .gitmessage
 
-Description: 
-
-Actor: 
 
 # This is a message default
