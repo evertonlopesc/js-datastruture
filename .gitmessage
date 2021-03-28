@@ -2,7 +2,10 @@
 
 # Title -------------------------------------|
 
-# Type title {new file, modified or delete}
+# Example: 
+# new file, template commit .gitmessage,
+# modified, .gitmessage with example,
+# delete, file .gitmessage
 
 Description: 
 
