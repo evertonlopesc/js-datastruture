@@ -19,7 +19,7 @@ const areas = 3.14 * (r ** rr);
 console.log(areas);
 
 // Modules - ES2015-ES6
-console.log(circleArea(2));
+console.log(circleArea("2"));
 console.log(squareArea(2));
 
 const myBook = new Book("Um amor para recordar");

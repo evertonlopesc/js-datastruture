@@ -1,3 +1,5 @@
+// @ts-check
+
 // Modules
 
 // Para expor somente um método podemos usar a palavra reservada:
