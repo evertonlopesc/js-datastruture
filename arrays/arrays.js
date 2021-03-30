@@ -145,5 +145,21 @@ console.log("REMOVE FIRST POSITION - SHIFT()");
 numbers.shift();
 console.log(numbers);
 
-console.log("IN PROJECT USE UNSHIFT, PUSH, SHIFT AND POP");
+console.log(
+    `REMOVE RANDOM POSITION - SPLICE(
+        1 - 'Position/Index', 
+        2 - 'Total elements remove', 
+        3 - 'Add elements'
+    )`
+);
 
+console.log(`print array: ${numbers} | size: ${numbers.length}`);
+numbers.splice(5,3);
+console.log(`splice(5,3): ${numbers} | size: ${numbers.length}`);
+
+numbers.splice(5,0,5,6,7);
+console.log(`splice(5,0,5,6,7): ${numbers} | size: ${numbers.length}`);
+
+console.log("Now, remove three and add three elements!")
+numbers.splice(5,3,5,6,7);
+console.log(`splice(5,3,5,6,7): ${numbers} | size: ${numbers.length}`);
