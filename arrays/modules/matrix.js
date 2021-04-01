@@ -1,4 +1,4 @@
-export default function initMatrixTwoDimensional() {
+function matrixTwoDimensional() {
     console.log(" ");
     console.log("ARRAYS TWO-DIMENSIONAL");
     
@@ -28,46 +28,50 @@ export default function initMatrixTwoDimensional() {
 
     function printMatrix(myMatrix) {
         for (let l = 0; l < myMatrix.length; l++) {
-            console.log(l + ": ");
-            for (let c = 0; c < myMatrix[l].length; c++) {
-                console.log(c +": " + myMatrix[l][c]);                
+            for (let c = 0; c < myMatrix[l].length; c++) {   
+                // Successfully?           
+            };
+        };
+
+        console.table(myMatrix);
+    };
+
+    printMatrix(averangeTempDay);
+}
+
+function matrixMultDimensional() {
+    console.log(" ");
+    console.log("ARRAYS MULTIDIMENSIONAL");
+    
+    const matrixM3x3x3 = [];
+
+    for (let linha = 0; linha < 3; linha++) {
+        matrixM3x3x3[linha] = [];
+        for (let coluna = 0; coluna < 3; coluna++) {
+            matrixM3x3x3[linha][coluna] = [];
+            for (let profundidade = 0; profundidade < 3; profundidade++) {
+                matrixM3x3x3[linha][coluna][profundidade] = linha + coluna + profundidade;
             };
         };
     };
 
-    console.table(averangeTempDay);
-    printMatrix(averangeTempDay);
-}
+    function printMatrix3x3x3() {
+        for (let linha = 0; linha < 3; linha++) {
+            for (let coluna = 0; coluna < 3; coluna++) {
+                for (let profundidade = 0; profundidade < 3; profundidade++) {
+                    // Successfully?
+                };
+            };
+        };
 
-export function initMatrixMultDimensional() {
-    console.log(" ");
-    console.log("ARRAYS TWO-DIMENSIONAL");
-    
-    // Day 1
-    let averangeTemp = [];
-    averangeTemp[0] = [72, 75, 79, 79, 81, 81];
-    averangeTemp[1] = [81, 79, 75, 75, 73, 72];
+        console.table(matrixM3x3x3);
+    };
 
-    console.log(averangeTemp);
+    printMatrix3x3x3();
+};
 
-    // Other Day 1
-    let averangeTempDay = [];
-    averangeTempDay[0] = [];
-    averangeTempDay[0][0] = 72;
-    averangeTempDay[0][1] = 75;
-    averangeTempDay[0][2] = 79;
-    averangeTempDay[0][3] = 79;
-    averangeTempDay[0][4] = 81;
-    averangeTempDay[0][5] = 81;
+export default function initMatrix() {
+    matrixTwoDimensional();
 
-    // Day 2
-    averangeTempDay[1] = [];
-    averangeTempDay[1][0] = 72;
-    averangeTempDay[1][1] = 75;
-    averangeTempDay[1][2] = 79;
-    averangeTempDay[1][3] = 79;
-    averangeTempDay[1][4] = 81;
-    averangeTempDay[1][5] = 81;
-
-    console.log(averangeTempDay);
+    matrixMultDimensional();
 }
