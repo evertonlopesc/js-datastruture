@@ -1,5 +1,4 @@
 export default function initArray() {
-
     // Create and Initialize arrays
 
     let daysOfWeek = new Array();
@@ -157,12 +156,14 @@ export default function initArray() {
 
     console.log(`print array: ${numbers} | size: ${numbers.length}`);
     numbers.splice(5,3);
+
     console.log(`splice(5,3): ${numbers} | size: ${numbers.length}`);
 
     numbers.splice(5,0,5,6,7);
     console.log(`splice(5,0,5,6,7): ${numbers} | size: ${numbers.length}`);
 
-    console.log("Now, remove three and add three elements!")
+    console.log("Now, remove three and add three elements!");
+
     numbers.splice(5,3,5,6,7);
     console.log(`splice(5,3,5,6,7): ${numbers} | size: ${numbers.length}`);
-}
+};
