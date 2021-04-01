@@ -1,7 +1,11 @@
-export default function initArray() {
+function printArray(param) {
+    console.log(param);
+};
+
+function createArray() {
     // Create and Initialize arrays
 
-    let daysOfWeek = new Array();
+    let daysOfWeek = new Array(); // First type of initializing an array
     daysOfWeek = new Array(7);
     daysOfWeek = new Array(
         "Monday", "Sunday", "Tuesdays", "Wednesday", "Thursday", "Friday", "Saturday"
@@ -10,17 +14,17 @@ export default function initArray() {
     for (let index = 0; index < daysOfWeek.length; index++) {
     daysOfWeek[index];
     };
-    console.log("DAYS OF WEEK");
-    console.log(daysOfWeek);
-    let daysOfWeekTwo = [];
-    let daysOfWeekThree = [
+    
+    let daysOfWeekTwo = []; // Second type of initializing an array
+    let daysOfWeekThree = [ // Third type of initializing an array
         "Monday", "Sunday", "Tuesdays", "Wednesday", "Thursday", "Friday", "Saturday"
     ];
 
-    for (let index = 0; index < daysOfWeekThree.length; index++) {
-    //console.log(daysOfWeek[index]);  
-    };
+    console.log("DAYS OF WEEK");
+    printArray(daysOfWeek);
+};
 
+function arrayFibonacci() {
     const fibonacci = [];
     fibonacci[1] = 1;
     fibonacci[2] = 1;
@@ -34,9 +38,12 @@ export default function initArray() {
     };
 
     fibonacci.shift();
-    console.log("FIBONACCI");
-    console.log(fibonacci);
 
+    console.log("FIBONACCI");
+    printArray(fibonacci);
+};
+
+function arrayPushPopUnshiftShiftSplice() {
     console.log("NEW ARRAY NUMBERS");
     let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     console.log(numbers);
@@ -75,10 +82,6 @@ export default function initArray() {
 
     console.log("INSERT FIRST POSITION - UNSHIFT()");
     numbers.unshift(-3);
-    console.log(numbers);
-
-    console.log("INSERT FIRST POSITION - UNSHIFT WHIT TWO NUMBERS");
-    numbers.unshift(-5, -4);
     console.log(numbers);
 
     console.log("REMOVE LAST POSITION - POP()");
@@ -166,4 +169,12 @@ export default function initArray() {
 
     numbers.splice(5,3,5,6,7);
     console.log(`splice(5,3,5,6,7): ${numbers} | size: ${numbers.length}`);
+}
+
+export default function initArray() {
+    createArray();
+    
+    arrayFibonacci();
+
+    arrayPushPopUnshiftShiftSplice();
 };
