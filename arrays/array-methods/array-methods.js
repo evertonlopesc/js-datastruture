@@ -111,11 +111,89 @@ for (const index of aValues) {
 };
 console.log(aValues.next());
 
-// From Method
-console.log("From Method");
+// Array.from Method
+console.log("Array.from Method");
 let newNumbers = Array.from(numbersMixed);
 console.log(newNumbers);
 
 let evens = Array.from(numbersMixed, index => (index % 2 == 0));
 console.log(evens);
 
+// Array.of Method
+console.log("Array.of Method");
+let newArray = Array.of(1);
+console.log(newArray);
+
+let copieArray = Array.of(1,2,3,4,5);
+console.log(copieArray);
+
+let arrayCopie = Array.of(...numbersMixed);
+console.log(arrayCopie);
+
+// Fill Method
+console.log("Fill Method");
+let numberCopy = Array.of(1,2,3,4,5);
+console.log("numberCopy: " + numberCopy);
+
+numberCopy.fill(0); // Initialize everything with 0
+console.log("numberCopy: " + numberCopy);
+
+numberCopy.fill(2,1);
+console.log("numberCopy: " + numberCopy);
+
+numberCopy.fill(1,3,5);
+console.log("numberCopy: " + numberCopy);
+
+let ones = Array(6).fill(1);
+console.log(ones);
+
+// CopyWithin Method
+console.log("CopyWithin Method");
+let copyArray = [1, 2, 3, 4, 5, 6];
+console.log(copyArray);
+
+copyArray.copyWithin(0, 3);
+console.log(copyArray);
+
+copyArray = [1, 2, 3, 4, 5, 6];
+console.log(copyArray);
+copyArray.copyWithin(1, 3, 5);
+console.log(copyArray);
+
+/**
+ * Elements ordering
+ * Sort, Reverse
+ */
+
+// Reserve Method
+console.log("Reserve Method");
+let numberRandom = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+console.log("numberRandom: " + numberRandom);
+
+numberRandom.reverse();
+console.log("numberRandom: " + numberRandom);
+
+numberRandom.sort();
+console.log("numberRandom: " + numberRandom);
+
+numberRandom.sort((a, b) => a - b);
+console.log("numberRandom: " + numberRandom);
+
+numberRandom = [12, 9, 3, 10, 5, -6, 7, 8, 1, 4, 11, 2];
+console.log("numberRandom: " + numberRandom);
+numberRandom.sort((a, b) => a - b);
+console.log("numberRandom: " + numberRandom);
+
+function compare(previus, next) {
+    if (previus < next) {
+        return -1
+    } else if ( previus > next) {
+        return 1
+    } else {
+        return 0
+    }
+};
+numberRandom = [12, 9, 3, 10, 5, -6, 7, 8, 1, 4, 11, 2];
+console.log(numberRandom);
+numberRandom.sort(compare);
+console.log(numberRandom);
