@@ -303,3 +303,10 @@ console.log(numbersMixed.includes(20));
 console.log(numbersMixed.includes(10, 8)); // fetch from some index
 console.log(numbersMixed.includes(5, 5));
 
+// toString and Join methods
+printTitle("toString and Join");
+
+console.log(numbersMixed.toString());
+
+const arrayChanged = numbersMixed.join(" - ");
+printScreen(arrayChanged);
