@@ -296,5 +296,10 @@ printScreen(numbersMixed);
 console.log(numbersMixed.find(multipleOf13));
 console.log(numbersMixed.findIndex(multipleOf13));
 
-
+// Includes methods
+printTitle("Includes");
+console.log(numbersMixed.includes(15));
+console.log(numbersMixed.includes(20));
+console.log(numbersMixed.includes(10, 8)); // fetch from some index
+console.log(numbersMixed.includes(5, 5));
 
