@@ -1,7 +1,7 @@
 console.log("Hello guys!!!")
 
-function printScreen(chars, param) {
-    return console.log(`${chars}: ${param}`);
+function printScreen(param) {
+    return console.log(`Array: ${param} | Size: ${param.length}`);
 };
 
 function printTitle(param) {
@@ -13,7 +13,7 @@ const arrays = [
     "map","reverse", " slice", "some", "sort", "toString", "valueOf"
 ];
 
-printScreen("Methods", arrays);
+printScreen(arrays);
 
 // CONCAT
 // It need of three elements, array + junction variable + array
@@ -23,7 +23,7 @@ const poristiveNumbers = [1, 2, 3];
 const negativeNumbers = [-3, -2, -1];
 
 let numbers = negativeNumbers.concat(zero, poristiveNumbers);
-printScreen("Concat", numbers);
+printScreen(numbers);
 
 
 // ITERATION FUNCTIONS
@@ -118,35 +118,35 @@ console.log(aValues.next());
 // Array.from Method
 printTitle("Array.from Method");
 let newNumbers = Array.from(numbersMixed);
-console.log(newNumbers);
+printScreen(newNumbers);
 
 let evens = Array.from(numbersMixed, index => (index % 2 == 0));
-console.log(evens);
+printScreen(evens);
 
 // Array.of Method
 printTitle("Array.of Method");
 let newArray = Array.of(1);
-console.log(newArray);
+printScreen(newArray);
 
 let copieArray = Array.of(1,2,3,4,5);
-console.log(copieArray);
+printScreen(copieArray);
 
 let arrayCopie = Array.of(...numbersMixed);
-console.log(arrayCopie);
+printScreen(arrayCopie);
 
 // Fill Method
 printTitle("Fill Method");
 let numberCopy = Array.of(1,2,3,4,5);
-console.log("numberCopy: " + numberCopy);
+printScreen(numberCopy);
 
 numberCopy.fill(0); // Initialize everything with 0
-console.log("numberCopy: " + numberCopy);
+printScreen(numberCopy);
 
 numberCopy.fill(2,1);
-console.log("numberCopy: " + numberCopy);
+printScreen(numberCopy);
 
 numberCopy.fill(1,3,5);
-console.log("numberCopy: " + numberCopy);
+printScreen(numberCopy);
 
 let ones = Array(6).fill(1);
 console.log(ones);
@@ -154,15 +154,15 @@ console.log(ones);
 // CopyWithin Method
 printTitle("CopyWithin Method");
 let copyArray = [1, 2, 3, 4, 5, 6];
-console.log(copyArray);
+printScreen(copyArray);
 
 copyArray.copyWithin(0, 3);
-console.log(copyArray);
+printScreen(copyArray);
 
 copyArray = [1, 2, 3, 4, 5, 6];
-console.log(copyArray);
+printScreen(copyArray);
 copyArray.copyWithin(1, 3, 5);
-console.log(copyArray);
+printScreen(copyArray);
 
 /**
  * Elements ordering
@@ -172,23 +172,23 @@ console.log(copyArray);
 // Reserve Method
 printTitle("Reserve Method");
 let numberRandom = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-console.log("numberRandom: " + numberRandom);
+printScreen(numberRandom);
 
 numberRandom.reverse();
-console.log("numberRandom: " + numberRandom);
+printScreen(numberRandom);
 
 // Sort Method
 printTitle("Sort Method");
 numberRandom.sort();
-console.log("numberRandom: " + numberRandom);
+printScreen(numberRandom);
 
 numberRandom.sort((a, b) => a - b);
-console.log("numberRandom: " + numberRandom);
+printScreen(numberRandom);
 
 numberRandom = [12, 9, 3, 10, 5, -6, 7, 8, 1, 4, 11, 2];
-console.log("numberRandom: " + numberRandom);
+printScreen(numberRandom);
 numberRandom.sort((prev, next) => prev - next);
-console.log("numberRandom: " + numberRandom);
+printScreen(numberRandom);
 
 function compare(previus, next) {
     if (previus < next) {
@@ -200,9 +200,9 @@ function compare(previus, next) {
     }
 };
 numberRandom = [12, 9, 3, 10, 5, -6, 7, 8, 1, 4, 11, 2];
-console.log(numberRandom);
+printScreen(numberRandom);
 numberRandom.sort(compare);
-console.log(numberRandom);
+printScreen(numberRandom);
 
 // Custom sorting
 printTitle("Custom sorting");
@@ -266,8 +266,17 @@ printArraysObjection(friends);
 // Search
 printTitle("Search");
 
+printScreen(numbersMixed);
 
+console.log(numbersMixed.indexOf(10));
+console.log(numbersMixed.indexOf(100));
 
+numbersMixed.push(10);
+
+printScreen(numbersMixed);
+
+console.log(numbersMixed.lastIndexOf(10));
+console.log(numbersMixed.lastIndexOf(100));
 
 
 
