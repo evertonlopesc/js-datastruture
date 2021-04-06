@@ -278,7 +278,23 @@ printScreen(numbersMixed);
 console.log(numbersMixed.lastIndexOf(10));
 console.log(numbersMixed.lastIndexOf(100));
 
+// Find and FindIndex methods
+printTitle("Find and FindIndex");
 
+printScreen(numbersMixed);
+
+function multipleOf13(element) {
+    return (element % 13 == 0);
+};
+
+console.log(numbersMixed.find(multipleOf13));
+console.log(numbersMixed.findIndex(multipleOf13));
+
+numbersMixed.splice(12, 1);
+printScreen(numbersMixed);
+
+console.log(numbersMixed.find(multipleOf13));
+console.log(numbersMixed.findIndex(multipleOf13));
 
 
 
