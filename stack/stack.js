@@ -1,3 +1,4 @@
+
 function printConsole(param) {
     return console.log(param);
 };
@@ -9,7 +10,7 @@ class Stack {
 
     push(element) {
         return console.log(
-            `Inserted element: ${this.items.push(element)}`);
+            `${this.items.push(element)}º element inserted`);
     };
 
     pop() {
@@ -28,7 +29,7 @@ class Stack {
     };
 
     size() {
-        return console.log(`Stack size: ${this.size.length}`);
+        return console.log(`Stack size: ${this.items.length}`);
     };
 
     clear() {
@@ -42,9 +43,11 @@ stack.isEmpty();
 stack.push(5);
 stack.push(8);
 printConsole(stack);
-
-stack.pop();
-
-stack.push(8);
-
 stack.peek();
+stack.push(11);
+stack.size();
+stack.isEmpty();
+stack.push(15);
+stack.pop();
+stack.pop();
+stack.size();
