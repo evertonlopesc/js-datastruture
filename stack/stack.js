@@ -1,3 +1,4 @@
+import StackObject from "./modules/stack-object.js";
 
 function printConsole(param) {
     return console.log(param);
@@ -51,3 +52,23 @@ stack.push(15);
 stack.pop();
 stack.pop();
 stack.size();
+
+/********************************************************************** */
+
+let miniStack = new StackObject();
+
+miniStack.push(10);
+miniStack.push(15);
+miniStack.isEmpty();
+miniStack.size();
+
+console.log(miniStack);
+miniStack.pop();
+miniStack.pop();
+miniStack.pop();
+miniStack.peek();
+miniStack.push(5);
+miniStack.push(8);
+miniStack.push(11);
+miniStack.peek();
+miniStack.clear();
