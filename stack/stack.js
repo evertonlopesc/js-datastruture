@@ -4,6 +4,7 @@ function printConsole(param) {
     return console.log(param);
 };
 
+// Study weakMap method
 class Stack {
     constructor() {
         this.items = [];
@@ -81,3 +82,8 @@ miniStack.pop();
 miniStack.toString();
 miniStack.push(8);
 miniStack.toString();
+
+const newStack = new StackObject();
+console.log(Object.getOwnPropertyNames(newStack));
+console.log(Object.keys(newStack));
+console.log(newStack.items);
