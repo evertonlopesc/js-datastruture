@@ -50,4 +50,16 @@ export default class StackObject {
         this.count = 0;
         console.log(this.items);
     };
+
+    toString() {
+        if (this.count === 0) {
+            return "";
+        } else {
+            let objString = `${this.items[0]}`;
+            for (let index = 1; index < this.count; index++) {
+                objString = `${objString},${this.items[index]}`;
+            };
+            return console.log(objString);
+        };
+    };
 };
