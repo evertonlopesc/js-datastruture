@@ -2,7 +2,7 @@ export default class StackObject {
     constructor() {
         this.count = 0;
         this.items = {};
-
+        
         //this._count
         //this._items Unprotected attributes
     };
