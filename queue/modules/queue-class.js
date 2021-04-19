@@ -10,29 +10,15 @@ export default class Queue {
         // Write the code here.
         this.items[this.count] = element;
         this.count++;
-
     };
     // dequeue removes the first element
     dequeue() {
         if (this.isEmpty()) {
             console.log("I can't remove it, the Queue is empty!");
         } else {
-            // fazer com que as casas mude da última posição para uma posição a frente.
-            for (let index = 0; index < this.count; index++) {
-                /**
-                 * armazenar o valor da segunda posição
-                 * guardar esse segundo valor na primeira posição
-                 * os demais valores posterior seguem o processo
-                 */
-                const element = this.items[index +1];
-                this.items[index] = element;
-                
-            };
-            delete this.items[this.count -1];
-            this.count--;
-
+            delete this.items[this.lowestcount];
+            this.lowestcount++;
         }
-        
     };
     // peek prints the first element
     peek() {
@@ -40,15 +26,30 @@ export default class Queue {
     };
     // isEmpty returns true or false
     isEmpty() {
-        return this.count === 0;
+        return this.size() === 0;
     };
     // size returns the length of the queue
     size() {
-        console.log(`Queue size: ${this.count}`);
+        return this.count - this.lowestcount;
     };
     // print queue
     toString() {
-        console.log(this.items);
+        if (this.isEmpty()) {
+            return '';
+        }
+        let objString = `${this.items[this.lowestcount]}`;
+        for (let i = this.lowestcount + 1; i < this.count; i++) {
+            objString = `${objString}, ${this.items[i]}`;
+        }
+        return objString;
+    };
+
+    // clear queue
+    clear() {
+        this.count = 0;
+        this.lowestcount = 0;
+        this.items = {};
+        return `Size: ${this.size()} - Empty: ${this.isEmpty()}`;
     };
 
 };
